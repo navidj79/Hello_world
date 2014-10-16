@@ -8,8 +8,9 @@
 development:
   adapter:  sqlite3
   encoding: unicode
-  database: helloworld_development
+  database: db/helloworld_development
   pool: 5
+  timeout: 5000
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -19,14 +20,16 @@ development:
 test:
   adapter:  sqlite3
   encoding: unicode
-  database: helloworld_test
+  database: db/helloworld_test
   pool: 5
+  timeout: 5000
   host: localhost
   
 
 production:
-  adapter:  sqlite3
+  adapter:  pg
   encoding: unicode
-  database: helloworld_production
+  database: db/helloworld_production
   pool: 5
+  timeout: 5000
   host: localhost
